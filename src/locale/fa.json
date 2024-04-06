@@ -1,0 +1,62 @@
+{
+  "menu": {
+    "upload": "آپلود",
+    "createFolder": "ایجاد پوشه",
+    "copy": "کپی",
+    "paste": "جایگذاری",
+    "move": "انتقال",
+    "download": "دانلود",
+    "rename": "تغییر نام",
+    "delete": "حذف",
+    "share": "اشتراک گذاری",
+    "shareGroup": "گروه‌ها",
+    "sharePerson": "افراد"
+  },
+  "main": "اصلی",
+  "sharedUser": "کاربرهای مشترک شده",
+  "navigation": {
+    "manageUsers": "مدیریت کاربران",
+    "manageGroups": "مدیریت گروه‌های کاربری",
+    "storageSpace": "فضای ذخیره‌سازی",
+    "manageFiles": "مدیریت فایل‌ها"
+  },
+  "table": {
+    "name": "نام",
+    "owner": "صاحب",
+    "filePath": "مسیر فایل",
+    "size": "اندازه",
+    "uploadTime": "زمان آپلود",
+    "creator": "ایجاد کننده",
+    "creationTime": "زمان ایجاد",
+    "lastModifier": "آخرین تغییر دهنده",
+    "lastModification": "زمان آخرین تغییر"
+  },
+  "delete": "حذف",
+  "edit": "ویرایش",
+  "register": "ثبت نام",
+  "username": "نام کاربری",
+  "firstName": "نام",
+  "lastName": "نام خانوادگی",
+  "type": {
+    "type": "نوع",
+    "user": "کاربر",
+    "admin": "مدیر"
+  },
+  "close": "بستن",
+  "selectGroup": "انتخاب گروه",
+  "createGroup": "ایجاد گروه",
+  "submit": "ثبت",
+  "currentUser": "کاربر فعلی",
+  "color": {
+    "blue": "آبی",
+    "green": "سبز",
+    "red": "قرمز"
+  },
+  "language": {
+    "english": "انگلیسی",
+    "persian": "فارسی"
+  },
+  "errors": {
+    "lengthError": "باید بین 5 تا 48 کاراکتر باشد"
+  }
+}

@@ -1,0 +1,810 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+#app.blue {
+  --primary-color: rgb(51, 72, 255);
+  --secondray-color: rgba(0, 119, 255, 0.07);
+}
+
+#app.red {
+  --primary-color: rgb(255, 51, 51);
+  --secondray-color: rgba(255, 0, 0, 0.07);
+}
+
+#app.green {
+  --primary-color: rgb(45, 204, 104);
+  --secondray-color: rgba(47, 255, 0, 0.09);
+}
+
+#app.rtl {
+  direction: rtl;
+}
+
+html {
+  font-family: sans-serif, system-ui;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  color: #e5e5e5;
+  border-radius: 99px;
+  border-width: 1px;
+  border-style: solid;
+  width: 100%;
+  height: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table thead {
+  background-color: rgb(246, 247, 249);
+  text-align: left;
+}
+
+.rtl table thead {
+  text-align: right;
+}
+
+table thead th, table td {
+  padding: .5em;
+}
+
+table td, table th {
+  border-bottom: 1px solid #dddddd;
+}
+
+table tr td:not(:first-child) {
+  color: rgb(96, 110, 128)
+}
+
+.hidden {
+  display: none !important;
+}
+
+.verticalLine {
+  width: 1px;
+  height: 2em;
+  background-color: rgb(195, 206, 215);
+}
+
+button, .button {
+  display: flex;
+  align-items: center;
+  border-radius: .5em;
+  border: 1px solid rgb(225, 229, 234);
+  background-color: #fff;
+  cursor: pointer;
+  height: 3em;
+  line-height: 1.15;
+  padding: 0 25px;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  text-transform: none;
+  transition: all ease 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: rgba(0, 0, 0, .07) 0 1px 1px 0;
+}
+
+button:hover, .button:hover {
+  bottom: 0.2em;
+}
+
+button.filled, .button.filled {
+  background-color: var(--primary-color);
+  color: #fff !important;
+  border-width: 0;
+  width: fit-content;
+}
+
+.checkbox .cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.checkbox .cbx:hover {
+  background: var(--secondray-color);
+}
+
+.checkbox .cbx span {
+  float: left;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+.rtl .checkbox .cbx span {
+  float: right;
+}
+
+.checkbox .cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  transform: scale(1);
+  border: 1px solid #cccfdb;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
+}
+
+.checkbox .cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.checkbox .cbx span:last-child {
+  padding-left: 11px;
+  line-height: 18px;
+}
+
+.rtl .checkbox .cbx span:last-child {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.checkbox .cbx:hover span:first-child {
+  border-color: var(--primary-color);
+}
+
+.checkbox .inp-cbx {
+  position: absolute;
+  visibility: hidden;
+}
+
+.checkbox .inp-cbx:checked + .cbx span:first-child {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  animation: wave 0.4s ease;
+}
+
+.checkbox .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+.checkbox .inline-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@-moz-keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@-webkit-keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@-o-keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .4);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.inputGroup {
+  display: grid;
+  gap: 2em;
+  width: fit-content;
+  margin: 2em auto;
+}
+
+.inputGroup label input {
+  height: 44px;
+  background-color: #05060f0a;
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color .3s cubic-bezier(.25, .01, .25, 1) 0s, color .3s cubic-bezier(.25, .01, .25, 1) 0s, background .2s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.select {
+  position: relative;
+  min-width: 200px;
+}
+
+.select svg {
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 3px);
+  width: 10px;
+  height: 6px;
+  stroke-width: 2px;
+  stroke: #9098a9;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.select select, .selectGroup {
+  -webkit-appearance: none;
+  padding: 7px 40px 7px 12px;
+  width: 100%;
+  border: 1px solid #e8eaed;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 1px 3px -2px #9098a9;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 150ms ease;
+}
+
+.select select:required:invalid {
+  color: #5a667f;
+}
+
+.select select option, .selectGroup {
+  color: #223254;
+}
+
+.select select option[value=""][disabled] {
+  display: none;
+}
+
+.select select:focus {
+  outline: none;
+  border-color: #07f;
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+.select select:hover + svg {
+  stroke: #07f;
+}
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 170ms;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
+  opacity: 0;
+}
+
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Header component */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  border-bottom: 1px solid rgb(225, 229, 234);
+}
+
+header .user .detail {
+  position: absolute;
+  right: 1em;
+  top: 4em;
+  height: 20em;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  background-color: #fff;
+  border-radius: .5em;
+  padding: 1em 1.2em;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  transition: all ease 200ms;
+}
+
+.rtl header .user .detail {
+  left: 1em;
+  right: auto;
+}
+
+header .user .detail .select select {
+  margin-bottom: 1em;
+}
+
+header .user .detail > a {
+  width: fit-content;
+  margin: 1em auto auto;
+  font-size: 15px;
+}
+
+header .user:hover .detail {
+  opacity: 1;
+  visibility: visible;
+}
+
+header .user .detail .currentUser {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+header .user .detail .currentUser span {
+  font-size: 14px;
+  color: rgb(96, 110, 128);
+}
+
+header .user .detail .users {
+  display: grid;
+  gap: 1em;
+  padding: .5em;
+  border: 1px solid rgb(225, 229, 234);
+  border-radius: .3em;
+}
+
+header .user .detail .users > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  cursor: pointer;
+}
+
+header .user .detail .users > div:not(:last-child) {
+  padding-bottom: .3em;
+  border-bottom: 1px solid rgb(225, 229, 234);
+}
+
+header .user .detail .users > div span {
+  font-size: 14px;
+  color: rgb(96, 110, 128);
+}
+
+
+/* navigation component */
+
+.content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.navigation {
+  width: 20%;
+  background-color: rgba(246, 247, 249, 1);
+  padding: 1em;
+}
+
+.navigation .menu {
+  display: grid;
+  gap: .75em;
+}
+
+.navigation .menu li {
+  display: flex;
+  align-items: center;
+  padding: .5em .75em;
+  transition: all ease 150ms;
+  user-select: none;
+}
+
+.navigation .menu li:hover, .navigation .menu li.active {
+  --color-opacity: .5;
+  border-radius: .25em;
+}
+
+.navigation .menu li:hover {
+  background-color: var(--secondray-color);
+}
+
+.navigation .menu li.active {
+  background-color: var(--primary-color);
+  color: #FFF;
+}
+
+.navigation .menu li a {
+  display: flex;
+  align-items: center;
+}
+
+.navigation .menu svg {
+  margin-right: .5em;
+}
+
+.rtl .navigation .menu svg {
+  margin-left: .5em;
+  margin-right: auto;
+}
+
+
+/* Home component */
+
+.home {
+  padding: 1em;
+  width: 100%;
+}
+
+.home > div {
+  background-color: #fff;
+}
+
+
+/* Files component */
+
+.files table tr td:first-child, .files table tr th:first-child {
+  padding-left: 1.25em;
+}
+
+.files table thead th, .files table td {
+  padding: .75em;
+}
+
+
+/* ManageFiles component */
+
+.manageFiles .menu {
+  border-bottom: 1px solid rgb(225, 229, 234);
+  padding-bottom: .5em;
+}
+
+.manageFiles .menu .actions {
+  display: flex;
+  gap: .5em;
+}
+
+.manageFiles .menu .actions a {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  padding: .5em;
+  border-radius: .5em;
+  transition: background-color ease 200ms;
+}
+
+.manageFiles .menu .actions a:hover {
+  background-color: var(--secondray-color);
+}
+
+.manageFiles .menu .actions .share {
+  position: relative;
+}
+
+.manageFiles .menu .actions .share > div {
+  position: absolute;
+  top: 2em;
+  left: 0;
+  font-size: 15px;
+  display: grid;
+  gap: .6em;
+  border-radius: .5em;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  width: 100%;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 150ms;
+}
+
+.manageFiles .menu .actions .share:hover > div {
+  opacity: 1;
+  visibility: visible;
+}
+
+.manageFiles .menu .actions .share > div > span {
+  cursor: pointer;
+}
+
+.manageFiles .menu, .manageFiles .menu > div {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.manageFiles .menu {
+  justify-content: space-between;
+  margin-bottom: .75em;
+}
+
+.manageFiles .menu > div:first-child svg {
+  margin-right: .5em;
+}
+
+.rtl .manageFiles .menu > div:first-child svg {
+  margin-left: .5em;
+  margin-right: auto;
+}
+
+.manageFiles .controls {
+  display: flex;
+  align-items: center;
+  gap: .75em;
+  margin-bottom: 2em;
+}
+
+.manageFiles .controls button {
+  padding: 0 .7em;
+  height: 2.7em;
+}
+
+.manageFiles .controls button:not(:first-child) {
+  padding: 0 .5em;
+}
+
+.manageFiles .controls button:first-child svg {
+  margin-right: .4em;
+}
+
+.rtl .manageFiles .controls button:first-child svg {
+  margin-left: .4em;
+  margin-right: auto;
+}
+
+.rtl .manageFiles .controls button:not(:first-child) svg {
+  transform: rotate(180deg);
+}
+
+.manageFiles .controls .path {
+  display: flex;
+  align-items: center;
+  padding: 0 .75em 0 .5em;
+  border: 1px solid rgb(225, 229, 234);
+  border-radius: .4em;
+  height: 2.5em;
+  width: 70%;
+}
+
+.manageFiles .controls .path svg {
+  margin-right: .5em;
+  color: rgb(146, 159, 177);
+}
+
+.rtl .manageFiles .controls .path svg {
+  margin-left: .5em;
+  margin-right: 0;
+}
+
+.manageFiles table {
+  overflow-y: scroll;
+}
+
+.manageFiles table .button {
+  width: fit-content;
+}
+
+.manageFiles table tr td:last-child {
+  text-align: -webkit-center;
+  width: 16%;
+}
+
+.manageFiles .fileName {
+  display: flex;
+  align-items: center;
+}
+
+.manageFiles .menu .modal > div {
+  background-color: #fff;
+  border-radius: .5em;
+  padding: 1em 1.5em;
+
+  width: 25%;
+}
+
+.manageFiles .menu .modal > div button.filled {
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.manageFiles .menu .modal > div .inputGroup label input {
+  width: 100%;
+}
+
+
+/* Register component */
+
+.register .inputGroup {
+  grid-template-columns: auto auto;
+}
+
+.register .inputGroup label:first-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.register .inputGroup label:first-child input {
+  width: 100%;
+}
+
+.register .inputGroup label input[readonly] {
+  color: #5a667f;
+}
+
+.register .inputGroup label span {
+  display: block;
+  margin-bottom: .3rem;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #05060f99;
+  transition: color .3s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.register .inputGroup label span:last-child {
+  color: #f87171;
+  font-size: 10px;
+  margin: .5em 0 0;
+}
+
+.register .inputGroup label input:hover, .register .inputGroup label input:focus, .register .inputGroup label label:hover input {
+  outline: none;
+  border-color: #05060f;
+}
+
+.register .inputGroup label:hover span:not(:last-child), .register .inputGroup label input:focus {
+  color: #05060fc2;
+}
+
+.register .inputGroup .sprites {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.register .inputGroup button.filled {
+  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+/* Users component */
+
+.users .button {
+  color: black;
+  font-size: 13px;
+}
+
+.users button.filled.delete {
+  background-color: rgb(237, 34, 34);
+}
+
+.users table tr td:first-child, .users table tr th:first-child {
+  padding-left: 1.25em;
+}
+
+.users table tr td:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+/* SelectGroups component */
+
+.groupModal > div {
+  background-color: #fff;
+  border-radius: .5em;
+  padding: 1em 1.5em;
+  height: 80%;
+
+  width: 25%;
+}
+
+.groupModal > div .list {
+  overflow-y: scroll;
+  height: 85%;
+  color: inherit;
+}
+
+.groupModal > div .list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.groupModal > div .list::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background-color: darkgrey;
+}
+
+.groupModal > div .list::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.groupModal .checkbox .cbx {
+  width: 100%;
+  padding: .75em;
+}
+
+.groupModal .checkbox .cbx span:first-child {
+  transform: rotate(45deg);
+}
+
+.groupModal .checkbox .cbx span:first-child svg {
+  transform: rotate(-45deg);
+}
+
+.groupModal button.filled {
+  font-size: 15px;
+  margin: 2em auto .5em !important;
+}
+
+
+/* Groups component */
+
+.users.groups table {
+  margin-top: 1em;
+}
+
+
+/* create Group component */
+
+.register.group .inputGroup .select select option, .selectGroup {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

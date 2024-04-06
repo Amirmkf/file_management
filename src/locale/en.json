@@ -1,0 +1,67 @@
+{
+  "menu": {
+    "upload": "Upload",
+    "createFolder": "Create folder",
+    "copy": "Copy",
+    "paste": "Paste",
+    "move": "Move",
+    "download": "Download",
+    "rename": "Rename",
+    "change": "Change",
+    "delete": "Delete",
+    "share": "Share",
+    "shareGroup": "groups",
+    "sharePerson": "persons"
+  },
+  "folderName": "Folder name",
+  "main": "Main",
+  "sharedUser": "shared user",
+  "navigation": {
+    "manageUsers": "Manage users",
+    "manageGroups": "Manage user groups",
+    "storageSpace": "Storage space",
+    "manageFiles": "Manage files"
+  },
+  "table": {
+    "name": "Name",
+    "owner": "Owner",
+    "size": "Size",
+    "filePath": "File path",
+    "uploadTime": "Upload Time",
+    "creator": "Creator",
+    "creationTime": "Creation time",
+    "lastModifier": "Last modifier",
+    "lastModification": "Last modification time"
+  },
+  "delete": "Delete",
+  "edit": "Edit",
+  "register": "Register",
+  "username": "Username",
+  "firstName": "First Name",
+  "lastName": "Last name",
+  "type": {
+    "type": "Type",
+    "user": "User",
+    "admin": "Admin"
+  },
+  "selectGroup": "Select group",
+  "selectUsers": "Select users",
+  "close": "close",
+  "createGroup": "Create Group",
+  "submit": "Submit",
+  "currentUser": "current user",
+  "color": {
+    "blue": "blue",
+    "green": "green",
+    "red": "red"
+  },
+  "language": {
+    "english": "English",
+    "persian": "Persian"
+  },
+  "errors": {
+    "lengthError": "must be between 5 and 48 characters",
+    "maxLength": "must be a maximum of 48 characters",
+    "exist": "This username exists"
+  }
+}
